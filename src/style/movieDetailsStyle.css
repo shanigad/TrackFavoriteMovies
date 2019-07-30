@@ -1,0 +1,26 @@
+#movieDtlsImg{
+    padding: 10px;
+    display: inline-block;
+}
+
+#movieSmry{
+    color:white;
+    text-align:left;
+}
+
+#movieDtlsMnDiv{
+    text-align:center;
+}
+
+#moviePreviewDiv{
+    border: 1px solid white;
+    background-size: cover;
+    display:inline-flex;
+    border-radius:20px;
+    width:700px;
+    height:400px;
+    margin:5px;
+    margin-top:100px;
+    text-align:initial;
+    padding:10px;
+}

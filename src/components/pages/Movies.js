@@ -2,9 +2,10 @@ import React,{useState, useEffect} from "react";
 import Preview from "../shared/Preview";
 import {getAllMoviesApiRequest} from "../../services/api";
 import PageHeader from "../shared/PageHeader";
+import '../../style/moviesStyle.css';
+
 
 function Movies() {
-
     // set the var and rerender
     const [movies, setMovies] = useState([]);
     // const [flag, setFlag] = useState(false);
@@ -22,7 +23,7 @@ function Movies() {
         <div>
             <PageHeader title={"Movies"}/>
             {/*<button onClick={() => setFlag(!flag)}>toggle</button>*/}
-            <div style={{textAlign:"center", paddingTop:"80px"}}>
+            <div id="moviesMnDiv">
                  {movies.map(movie => (
                      <Preview movie={movie}/>
                  ))}

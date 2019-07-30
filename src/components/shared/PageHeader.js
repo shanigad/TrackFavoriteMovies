@@ -1,13 +1,13 @@
 
 import React from "react";
 import Navigation from "./Navigation";
+import '../../style/pageHeaderStyle.css';
+
 
 const  PageHeader = ({title}) => (
-    // const {movie} = props
-    //
     <>
-        <div style={{position:"fixed", width:"100%", backgroundColor:"black"}}>
-            <h1 style={{color: "white", textAlign: "center"}}>{title}</h1>
+        <div id="pageHdrMnDiv">
+            <h1 id="pageTtl">{title}</h1>
             <Navigation/>
         </div>
     </>

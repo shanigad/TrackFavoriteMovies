@@ -1,18 +1,16 @@
 
 import React from "react";
-import Navigation from "../shared/Navigation";
 import favoritesManager from "../../services/favoritesManager";
+import '../../style/favoritesStyle.css';
+import PageHeader from "../shared/PageHeader";
 
 function Favorites() {
-    const favories = favoritesManager
+    // const favories = favoritesManager
 
     return (
 
         <div>
-
-            <h1 style={{color: "white"}}>Favorites</h1>
-            <Navigation/>
-
+            <PageHeader title="Favorites"/>
         </div>
 
     );
