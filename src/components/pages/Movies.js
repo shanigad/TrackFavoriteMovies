@@ -8,12 +8,10 @@ import '../../style/moviesStyle.css';
 function Movies() {
     // set the var and rerender
     const [movies, setMovies] = useState([]);
-    // const [flag, setFlag] = useState(false);
 
     // run this only at the first time this app is started
     useEffect(function (){
         // Get the data
-        // run once
         getAllMoviesApiRequest().then(data => setMovies(data.results));
         // unmount
         return () => {console.log("I'm dead")}
@@ -22,10 +20,11 @@ function Movies() {
     return (
         <div>
             <PageHeader title={"Movies"}/>
-            {/*<button onClick={() => setFlag(!flag)}>toggle</button>*/}
-            <div id="moviesMnDiv">
+            <div className="moviesMnDiv">
                  {movies.map(movie => (
-                     <Preview movie={movie}/>
+                     <span key={movie.id}>
+                        <Preview movie={movie}/>
+                     </span>
                  ))}
             </div>
         </div>
