@@ -6,8 +6,8 @@ function Navigation() {
 
     return (
         <div id="mainDiv">
-                <Link class="linkStyle" to="/"> All Movies </Link>
-                <Link class="linkStyle" to="/favorites"> My Favorites </Link>
+                <Link className="linkStyle" to="/"> All Movies </Link>
+                <Link className="linkStyle" to="/favorites"> My Favorites </Link>
         </div>
 
     );

@@ -7,6 +7,5 @@ export function getAllMoviesApiRequest() {
 
 export function getMovieDetailsApiRequest(movieId) {
     let url = `https://api.themoviedb.org/3/movie/${movieId}?&api_key=cfe422613b250f702980a3bbf9e90716`;
-    console.log(movieId);
     return fetch(url).then(response => response.json())
 }
