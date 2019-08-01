@@ -1,21 +1,37 @@
-import FavoriteButton from "../components/shared/FavoriteButton";
+// import ls from 'local-storage';
 
-
-class favoritesManager {
-    constructor(){
-        this.myfavoritMovies = [550];
+    // let favorites = [];
+    const myStorage = window.localStorage;
+    export function isFavorite(movieID) {
+        return myStorage.getItem(movieID) !== null;
     }
 
-    getAllFavorites(){
-        return this.myfavoritMovies;
+    export function addToFavorites(movieID, movie) {
+        // favorites.push(movieID);
+        myStorage.setItem(movieID, movie);
     }
 
-    addToFavorites(movieID){
-        this.myfavoritMovies.push(movieID);
+    export function deleteFromFavorites(movieID) {
+        myStorage.removeItem(movieID);
     }
 
-}
+    // export function getAllFavorites() {
+        // let retVal = [];
+        // let tempFav = [];
+        // favorites.forEach(movieID => {
+        //     const favMovie = myStorage.getItem(movieID);
+        //     if (favMovie !== null){
+        //         retVal.push(favMovie);
+        //         tempFav.push(movieID);
+        //     }
+        // });
+        // favorites = tempFav;
+        // return retVal;
+    // }
+
+    // export function setAllFavorites(favMovies) {
+        // console.log("setAllFavorites size: " + favMovies);
+        // favorites = favMovies;
+    // }
 
 
-
-export default favoritesManager

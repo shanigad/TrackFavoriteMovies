@@ -1,9 +1,11 @@
 
 import React,{useState, useEffect} from "react";
 import {getMovieDetailsApiRequest} from "../../services/api";
+import {isFavorite} from "../../services/favoritesManager";
 import PageHeader from "../shared/PageHeader";
 import FavoriteButton from "../shared/FavoriteButton";
 import '../../style/movieDetailsStyle.css';
+
 
 
 
@@ -20,7 +22,6 @@ function MovieDetails({match}) {
         // Get the data
         // run once
         getMovieDetailsApiRequest(match.params.id).then(data => setMovie(data));
-        console.log(match.params.id);
         // unmount
         return () => {console.log("I'm dead")}
     }, []);
@@ -28,7 +29,7 @@ function MovieDetails({match}) {
         <div id="movieDtlsMnDiv">
             <PageHeader title={movie.title}/>
             <div id="moviePreviewDiv">
-                <FavoriteButton isFavorite={true} movieID={match.params.id}/>
+                <FavoriteButton isFavorite={isFavorite(match.params.id)} movie={match.params}/>
                 <img id="movieDtlsImg" src={imgPathPrefix + movie.poster_path}/>
                 <p id="movieSmry">{movie.overview}</p>
 
