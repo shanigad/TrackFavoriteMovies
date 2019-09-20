@@ -1,7 +1,6 @@
 
 import React, {useEffect,useState} from "react";
 import {isFavorite} from "../../services/favoritesManager";
-import '../../style/favoritesStyle.css';
 import PageHeader from "../shared/PageHeader";
 import Preview from "../shared/Preview";
 import {getAllMoviesApiRequest} from "../../services/api";
