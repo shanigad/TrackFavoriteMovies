@@ -3,7 +3,6 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Movies from "./components/pages/Movies";
 import MovieDetails from "./components/pages/MovieDetails";
 import Favorites from "./components/pages/Favorites";
-import favoritesManager from "./services/favoritesManager";
 
 function App() {
   return (
