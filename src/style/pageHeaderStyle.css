@@ -1,0 +1,10 @@
+#pageHdrMnDiv{
+    position:fixed;
+    width:100%;
+    background-color:black;
+}
+
+#pageTtl{
+    color:white;
+    text-align:center;
+}
