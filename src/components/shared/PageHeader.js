@@ -1,13 +1,15 @@
 
 import React from "react";
 import Navigation from "./Navigation";
-import '../../style/pageHeaderStyle.css';
 
-
+const headerStyle = {
+    color :'white',
+    textAlign : 'center'
+};
 const  PageHeader = ({title}) => (
     <>
-        <div id="pageHdrMnDiv">
-            <h1 id="pageTtl">{title}</h1>
+        <div>
+            <h1 style={headerStyle} id="pageTtl">{title}</h1>
             <Navigation/>
         </div>
     </>

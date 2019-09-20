@@ -2,9 +2,11 @@ import React,{useState, useEffect} from "react";
 import Preview from "../shared/Preview";
 import {getAllMoviesApiRequest} from "../../services/api";
 import PageHeader from "../shared/PageHeader";
-import '../../style/moviesStyle.css';
 
-
+const mainDivStyle = {
+    textAlign:'center',
+    paddingTop:'80px'
+};
 function Movies() {
     // set the var and rerender
     const [movies, setMovies] = useState([]);
@@ -20,7 +22,7 @@ function Movies() {
     return (
         <div>
             <PageHeader title={"Movies"}/>
-            <div className="moviesMnDiv">
+            <div style={mainDivStyle}>
                  {movies.map(movie => (
                      <span key={movie.id}>
                         <Preview movie={movie}/>
